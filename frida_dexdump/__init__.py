@@ -38,6 +38,10 @@ if in_objection():
                     'dump': {
                         'meta': 'dump all dex',
                         'exec': self.dump
+                    },
+                    'deep': {
+                        'meta': 'switch mode to deep',
+                        'exec': self.switch_deep
                     }
                 }
             }
@@ -48,11 +52,16 @@ if in_objection():
 
         def search(self, args=None):
             main.search(self.api)
+        
+        def switch_deep(self, args=None):
+            main.enable_deep(self.api)
 
         def dump(self, args=None):
             """
             """
             main.dump(state_connection.gadget_name, self.api)
+        
+        
 
 
     namespace = 'dexdump'

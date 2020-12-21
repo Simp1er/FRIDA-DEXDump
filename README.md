@@ -54,5 +54,6 @@
         objection -g com.app.name explore -P ~/.objection/plugins
         ```
     3. run command:
-        1. ` plugin dexdump search ` to search and print all dex
+        1. ` plugin dexdump deep ` to enable deep search (Optional)
         2. ` plugin dexdump dump ` to dump all found dex.
+        

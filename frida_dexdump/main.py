@@ -129,6 +129,14 @@ def dump(pkg_name, api, mds=None):
         except Exception as e:
             click.secho("[Except] - {}: {}".format(e, info), bg='yellow')
 
+def enable_deep(api):
+    """
+    """
+    try:
+        click.secho("[DEXDump]: enable deep search")
+        api.switchmode(True)
+    except:
+        pass
 
 def stop_other(pid, processes):
     try:
